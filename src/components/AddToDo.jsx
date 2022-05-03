@@ -1,11 +1,19 @@
-import React from "react";
-import { Input, InputGroup, InputGroupText } from "reactstrap";
+import React, { useEffect, useRef } from "react";
+import { InputGroup, InputGroupText } from "reactstrap";
 
 const AddToDo = ({ handleInput, addToDo, value, selected, saveToDo }) => {
+  const target = useRef();
+
+  useEffect(() => {
+    console.log("AddToDo");
+  });
+
   return (
     <div className="mt-3">
       <InputGroup className="m-auto">
-        <Input
+        <input
+          ref={target}
+          className="form-control"
           placeholder="To do yozing"
           onChange={handleInput}
           value={value}
@@ -21,4 +29,4 @@ const AddToDo = ({ handleInput, addToDo, value, selected, saveToDo }) => {
   );
 };
 
-export default AddToDo;
+export default React.memo(AddToDo);

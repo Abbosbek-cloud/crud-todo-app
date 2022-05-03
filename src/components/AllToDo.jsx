@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Alert, Badge, Button, ListGroup, ListGroupItem } from "reactstrap";
 import { AiOutlineCheck, AiOutlineEdit } from "react-icons/ai";
 
 const AllToDo = ({ todos, confirmHandler, editToDo }) => {
+  useEffect(() => {
+    console.log("AllToDO");
+  });
   return (
     <div className="">
       {todos.length !== 0 ? (
@@ -35,4 +38,4 @@ const AllToDo = ({ todos, confirmHandler, editToDo }) => {
   );
 };
 
-export default AllToDo;
+export default React.memo(AllToDo);

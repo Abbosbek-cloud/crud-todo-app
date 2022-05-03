@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Alert, Badge, Button, ListGroup, ListGroupItem } from "reactstrap";
 import { AiOutlineDelete } from "react-icons/ai";
 
 const DoneToDo = ({ doneToDos, onDeleteToDo }) => {
+  useEffect(() => {
+    console.log("DoneToDo");
+  });
   const time = "12:36";
   return (
     <div className="">
@@ -30,4 +33,4 @@ const DoneToDo = ({ doneToDos, onDeleteToDo }) => {
   );
 };
 
-export default DoneToDo;
+export default React.memo(DoneToDo);
