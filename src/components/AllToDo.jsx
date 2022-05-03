@@ -1,11 +1,8 @@
-import React, { useEffect } from "react";
-import { Alert, Badge, Button, ListGroup, ListGroupItem } from "reactstrap";
+import React from "react";
+import { Alert, Button, ListGroup, ListGroupItem } from "reactstrap";
 import { AiOutlineCheck, AiOutlineEdit } from "react-icons/ai";
 
 const AllToDo = ({ todos, confirmHandler, editToDo }) => {
-  useEffect(() => {
-    console.log("AllToDO");
-  });
   return (
     <div className="">
       {todos.length !== 0 ? (

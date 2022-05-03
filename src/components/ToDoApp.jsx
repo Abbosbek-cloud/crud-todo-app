@@ -1,15 +1,9 @@
-import React, { useEffect, useState, useCallback } from "react";
-import { toast } from "react-toastify";
+import React from "react";
 import useTodo from "../Custom/useTodo";
 import AddToDo from "./AddToDo";
 import AllToDo from "./AllToDo";
 import DoneToDo from "./DoneToDo";
 import Process from "./Process";
-
-const timeers = new Date().getHours();
-const timerMinutes = new Date().getMinutes();
-
-const timeObj = { hour: timeers, minute: timerMinutes };
 
 const ToDoApp = () => {
   const [

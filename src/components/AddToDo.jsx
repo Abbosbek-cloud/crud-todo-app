@@ -4,10 +4,6 @@ import { InputGroup, InputGroupText } from "reactstrap";
 const AddToDo = ({ handleInput, addToDo, value, selected, saveToDo }) => {
   const target = useRef();
 
-  useEffect(() => {
-    console.log("AddToDo");
-  });
-
   return (
     <div className="mt-3">
       <InputGroup className="m-auto">
